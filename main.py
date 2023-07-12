@@ -13,3 +13,5 @@ def findMax():
   for i in range(len(list)):
     if list[i] > list[i+1]:
       
+#test commit from phone
+      
