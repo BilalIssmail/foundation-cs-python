@@ -1,8 +1,11 @@
+# Defining display menu main function from which other functions can be called
 def displayMenu():
   choice = int(input("""Choose:
   1- Count Digits
   2- Find Maximum
-  3- Exit"""))
+  3-Count Tags
+  4- Exit"""))
+# Choice 1: Count Digits
   if choice == 1:
     def countDigits(num):
      if num < 10:
@@ -11,6 +14,8 @@ def displayMenu():
        return(1 + countDigits(num//10))
     num = int(input("Enter an integer:"))
     print(countDigits(num))
+    displayMenu()
+# Choice 2: Find max
   elif choice == 2:
     list = []
     n = int(input("Enter an integer to add to the list or press zero to end list and find the maximum:"))
@@ -30,6 +35,16 @@ def displayMenu():
      else:
       print("The max integer is " + str(list) )
     findMax(list)
+    displayMenu()
+# Choice 3: Count Tags
+  elif choice == 3:
+    print("Count Tags")
+    displayMenu()
+# Choice 4: Exit
+  elif choice == 4:
+    print("You've terminated the program.")
+# Wrong Choice
   else:
-   print("error")
+   print("Wrong choice. Please choose from inside the menu.")
+   displayMenu()
 displayMenu()
