@@ -38,7 +38,18 @@ def displayMenu():
     displayMenu()
 # Choice 3: Count Tags
   elif choice == 3:
-    print("Count Tags")
+    def countTag ():
+      cd = input("Enter your html code:")
+      tg = ("<"+input("Enter the tag you want to count:")+">")
+      count = 0
+      if tg in cd:
+        count+=1
+        del (tg)
+        return (cd)
+        countTag()
+      else:
+        print("The number of occurences of "+ str(tg) + "in your code is: " + str(count))
+    countTag()
     displayMenu()
 # Choice 4: Exit
   elif choice == 4:
