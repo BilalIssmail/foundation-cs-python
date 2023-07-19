@@ -1,7 +1,3 @@
-##############
-#Assignment 3#
-##############
-
 #Choice 1: Sum Tuples
 len1 = int(input("len1:"))
 lst1 = []
@@ -31,3 +27,14 @@ def sumTuple():
       tup = tuple(lst2)
     print("Output tuple is:" + str(tup))
 sumTuple()
+
+#Choice 2: Export JSON
+import json
+
+person = {
+  "name" : "Bilal",
+  "Course" : "FCS",
+  "Cycle" : "46"  
+}
+with open(r'./person.json', 'w') as output:
+  json.dump(person, output)
